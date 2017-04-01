@@ -4,7 +4,8 @@
   "description": "A application that demonstrates use of commonJS",
   "main": "index.js",
   "scripts": {
-    "test": "http-server"
+    "test": "http-server",
+    "bundle": "webpack"
   },
   "keywords": [
     "angular",

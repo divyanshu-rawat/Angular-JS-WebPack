@@ -13,8 +13,6 @@ function GithubStatusService($http) {
             method: 'jsonp',
             url: 'https://status.github.com/api/status.json?callback=JSON_CALLBACK',
             transformResponse: appendTransform($http.defaults.transformResponse, function(value) {
-
-                // console.log(value.status);
                 return (value.status === 'good');
             
             })
