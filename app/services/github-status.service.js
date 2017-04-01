@@ -23,7 +23,7 @@ function GithubStatusService($http) {
     }
 }
 
-angular.module('dashboard').service('GithubStatusService', GithubStatusService);
+// angular.module('dashboard').service('GithubStatusService', GithubStatusService);
 
 function appendTransform(defaults, transform) {
 
@@ -33,3 +33,6 @@ function appendTransform(defaults, transform) {
   return defaults.concat(transform);
 
 }
+
+
+module.exports = GithubStatusService

@@ -1,0 +1,21 @@
+{
+  "name": "angular-webpack-starter",
+  "version": "1.0.0",
+  "description": "A application that demonstrates use of commonJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "http-server"
+  },
+  "keywords": [
+    "angular",
+    "common",
+    "JS",
+    "http-server"
+  ],
+  "author": "divyanshu rawat",
+  "license": "MIT",
+  "devDependencies": {
+    "angular": "^1.6.4",
+    "webpack": "^2.3.2"
+  }
+}
