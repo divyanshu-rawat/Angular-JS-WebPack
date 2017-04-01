@@ -5,11 +5,12 @@ DashboardController.$inject = ['GithubStatusService'];
 function DashboardController(gh) {
     var _this = this;
     _this.github = '';
-    gh.getStatus().then(function(status) {
-        _this.github = status;
+    gh.getStatus().then(function(response) {
+
+    	response = response.data.status;
+        _this.github = response;
     });
 }
 
-// angular.module('dashboard').controller('dashboardController', DashboardController);
 
 module.exports = DashboardController;

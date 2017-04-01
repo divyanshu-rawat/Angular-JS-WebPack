@@ -12,7 +12,7 @@ function GithubStatusService($http) {
 
             method: 'jsonp',
             url: 'https://status.github.com/api/status.json?callback=JSON_CALLBACK',
-            transformResponse: appendTransform($http.defaults.transformResponse, function(value) {
+            transform: appendTransform($http.defaults.transformResponse, function(value) {
                 return (value.status === 'good');
             
             })
@@ -21,13 +21,14 @@ function GithubStatusService($http) {
     }
 }
 
-// angular.module('dashboard').service('GithubStatusService', GithubStatusService);
-
 function appendTransform(defaults, transform) {
 
   defaults = angular.isArray(defaults) ? defaults : [defaults];
 
-  console.log(defaults.concat(transform));
+  // console.log(defaults);
+
+  // console.log('yup',transform);
+  
   return defaults.concat(transform);
 
 }
